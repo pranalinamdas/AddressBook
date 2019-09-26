@@ -8,14 +8,16 @@ public class AddressBook {
     private ArrayList<Person> people;
 
     public AddressBook() {
-        this.people = new ArrayList<Person>();
+        people = new ArrayList<>();
     }
 
     public boolean addPerson(Person person) {
+
+        people.add(person);
         return true;
     }
 
     public List<Person> get() {
-        return new ArrayList<>();
+        return people;
     }
 }
