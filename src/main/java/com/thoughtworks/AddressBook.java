@@ -1,18 +1,21 @@
 package com.thoughtworks;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AddressBook {
 
-    Person person;
+    private ArrayList<Person> people;
 
-    public AddressBook(Person person) {
-        this.person = person;
+    public AddressBook() {
+        this.people = new ArrayList<Person>();
     }
 
-    public boolean addPerson() {
+    public boolean addPerson(Person person) {
+        return true;
+    }
 
-        ArrayList<Person> list = new ArrayList<>();
-        return list.add(person);
+    public List<Person> get() {
+        return new ArrayList<>();
     }
 }

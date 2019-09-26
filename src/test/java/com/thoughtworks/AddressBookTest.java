@@ -10,9 +10,17 @@ public class AddressBookTest {
         Address address = new Address("Maharashtra", "Pune", 412202);
         Person person = new Person("pranali", 98877676, address);
 
-        AddressBook execute = new AddressBook(person);
+        AddressBook addressBook = new AddressBook();
 
-        Assertions.assertTrue(execute.addPerson());
+        Assertions.assertTrue(addressBook.addPerson(person));
     }
+
+    @Test
+    void givenNoPersonAddedInAddressBook_WhenRetrieveAddressBookContents_ThenShouldNotReturnAnyPerson() {
+        AddressBook addressBook = new AddressBook();
+
+        Assertions.assertTrue(addressBook.get().isEmpty());
+    }
+
 
 }
